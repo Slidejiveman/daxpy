@@ -158,8 +158,11 @@ int main()
             double finish_time = ts_to_ms(&finish);
             double wall_time = finish_time - start_time;
             print_daxpy(y, n, time_spent, wall_time);
+            free(x);
+            free(y);
         }
     }
+
 
     // exit the program
     printf("Goodbye!\n");
